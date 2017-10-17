@@ -13,15 +13,59 @@
         android:stretchColumns="0,1">
 
         <TableRow>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/ad" />
+
             <EditText
                 android:id="@+id/txtAd"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:inputType="textPersonName" />
         </TableRow>
 
+        <TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/soyad" />
+
+            <EditText
+                android:id="@+id/txtSoyad"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textPersonName" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/telefon" />
+
+            <EditText
+                android:id="@+id/txtTelefon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="phone" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/email" />
+
+            <EditText
+                android:id="@+id/txtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textEmailAddress" />
+        </TableRow>
     </TableLayout>
 </LinearLayout>

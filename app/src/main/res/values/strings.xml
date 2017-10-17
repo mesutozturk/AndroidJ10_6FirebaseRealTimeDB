@@ -2,4 +2,7 @@
     <string name="app_name">Firebase RealTimeDB</string>
     <string name="yeni">Yeni</string>
     <string name="ad">Ad</string>
+    <string name="soyad">Soyad</string>
+    <string name="telefon">Telefon</string>
+    <string name="email">E Mail</string>
 </resources>
