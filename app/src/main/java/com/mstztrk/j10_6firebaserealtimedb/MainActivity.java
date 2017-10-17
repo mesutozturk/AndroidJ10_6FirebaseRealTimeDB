@@ -1,5 +1,7 @@
 package com.mstztrk.j10_6firebaserealtimedb;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -38,6 +40,7 @@ public class MainActivity extends BaseActivity {
                 startActivity(intent);
             }
         });
+
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
@@ -47,6 +50,37 @@ public class MainActivity extends BaseActivity {
                 startActivity(intent);
             }
         });
+        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int position, long l) {
+                final int pos = position;
+                DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        switch (which) {
+                            case DialogInterface.BUTTON_POSITIVE:
+                                showProgress("Siliniyor");
+                                database = FirebaseDatabase.getInstance();
+                                myRef = database.getReference().child("kisiler").child(kisiler.get(pos).getId());
+                                myRef.removeValue();
+                                hideProgress();
+                                break;
+
+                            case DialogInterface.BUTTON_NEGATIVE:
+                                Toast.makeText(MainActivity.this, "Silme işleminden vazgeçildi", Toast.LENGTH_SHORT).show();
+                                break;
+                        }
+                    }
+                };
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setMessage("Silmek istediğinize emin misiniz?").setPositiveButton("Evet", dialogClickListener)
+                        .setNegativeButton("Hayır", dialogClickListener).show();
+
+                return true;
+            }
+        });
+
     }
 
     private void listeyiDoldur() {
