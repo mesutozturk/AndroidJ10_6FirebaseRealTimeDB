@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="btnyazi">25sp</dimen>
+    <dimen name="txtyazi">22sp</dimen>
     <dimen name="linearpadding">5dp</dimen>
+    <dimen name="butonmargin">5dp</dimen>
 </resources>

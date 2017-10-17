@@ -9,12 +9,10 @@
 
     <Button
         android:id="@+id/btnYeni"
+        style="@style/MainButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/butonrengi"
-        android:text="@string/yeni"
-        android:textColor="@color/colorAccent"
-        android:textSize="@dimen/btnyazi" />
+        android:text="@string/yeni" />
 
     <ListView
         android:id="@+id/listView"
