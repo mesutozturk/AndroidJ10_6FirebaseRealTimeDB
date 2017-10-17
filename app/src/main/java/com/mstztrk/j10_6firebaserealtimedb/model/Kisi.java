@@ -52,4 +52,9 @@ public class Kisi {
     public void setMail(String mail) {
         this.mail = mail;
     }
+
+    @Override
+    public String toString() {
+        return this.ad + " "+ this.soyad;
+    }
 }

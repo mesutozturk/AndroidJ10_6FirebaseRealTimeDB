@@ -26,5 +26,6 @@
 
     <style name="EditTextler" parent="TextViewlar">
         <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
     </style>
 </resources>
