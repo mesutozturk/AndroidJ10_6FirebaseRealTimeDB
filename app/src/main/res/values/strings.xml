@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Firebase RealTimeDB</string>
+    <string name="yeni">Yeni</string>
+    <string name="ad">Ad</string>
+</resources>

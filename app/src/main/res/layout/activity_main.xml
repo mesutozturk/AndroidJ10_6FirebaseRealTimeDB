@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/linearpadding"
+    tools:context="com.mstztrk.j10_6firebaserealtimedb.MainActivity">
+
+    <Button
+        android:id="@+id/btnYeni"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/butonrengi"
+        android:text="@string/yeni"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/btnyazi" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
