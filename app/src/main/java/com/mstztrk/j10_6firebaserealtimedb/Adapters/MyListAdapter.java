@@ -82,6 +82,19 @@ public class MyListAdapter extends BaseAdapter {
                 }
             }
         });
+        btnMail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                //intent.setType("text/plain");
+                intent.setType("message/rfc822");
+
+                intent.putExtra(Intent.EXTRA_EMAIL, basilacakKisi.getMail());
+                intent.putExtra(Intent.EXTRA_SUBJECT, "Bu mail android dersinden gönderilmiştir");
+                intent.putExtra(Intent.EXTRA_TEXT, "Merhaba " + basilacakKisi.getAd() + " " + basilacakKisi.getSoyad());
+                context.startActivity(intent.createChooser(intent, "Mail Gönder"));
+            }
+        });
 
         return view;
     }
