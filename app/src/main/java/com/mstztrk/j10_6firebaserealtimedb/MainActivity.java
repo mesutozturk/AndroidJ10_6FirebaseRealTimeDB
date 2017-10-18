@@ -3,7 +3,9 @@ package com.mstztrk.j10_6firebaserealtimedb;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
@@ -45,7 +47,8 @@ public class MainActivity extends BaseActivity {
             }
         });
 
-        /*baseAdapter = new BaseAdapter() {
+        /*
+        baseAdapter = new BaseAdapter() {
             @Override
             public int getCount() {
                 if (kisiler == null)
@@ -150,5 +153,15 @@ public class MainActivity extends BaseActivity {
 
             }
         });
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == 100) {
+            boolean izinVerildiMi = grantResults[0] == PackageManager.PERMISSION_GRANTED;
+            if (!izinVerildiMi)
+                Toast.makeText(this, "Arama özelliğini kullanmak istiyorsan arama iznini vermelisin", Toast.LENGTH_LONG).show();
+        }
     }
 }
