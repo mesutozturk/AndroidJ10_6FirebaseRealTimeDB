@@ -7,75 +7,82 @@
     android:padding="@dimen/linearpadding"
     tools:context="com.mstztrk.j10_6firebaserealtimedb.AddUpdateActivity">
 
-    <TableLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:stretchColumns="1">
+        android:scrollbars="vertical">
 
-        <TableRow>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1">
 
-            <TextView
-                style="@style/TextViewlar"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/ad" />
+            <TableRow>
 
-            <EditText
-                android:id="@+id/txtAd"
-                style="@style/EditTextler"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:inputType="textPersonName" />
-        </TableRow>
+                <TextView
+                    style="@style/TextViewlar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/ad" />
 
-        <TableRow>
+                <EditText
+                    android:id="@+id/txtAd"
+                    style="@style/EditTextler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPersonName" />
+            </TableRow>
 
-            <TextView
-                style="@style/TextViewlar"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/soyad" />
+            <TableRow>
 
-            <EditText
-                android:id="@+id/txtSoyad"
-                style="@style/EditTextler"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:inputType="textPersonName" />
-        </TableRow>
+                <TextView
+                    style="@style/TextViewlar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/soyad" />
 
-        <TableRow>
+                <EditText
+                    android:id="@+id/txtSoyad"
+                    style="@style/EditTextler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPersonName" />
+            </TableRow>
 
-            <TextView
-                style="@style/TextViewlar"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/telefon" />
+            <TableRow>
 
-            <EditText
-                android:id="@+id/txtTelefon"
-                style="@style/EditTextler"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:inputType="phone" />
-        </TableRow>
+                <TextView
+                    style="@style/TextViewlar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/telefon" />
 
-        <TableRow>
+                <EditText
+                    android:id="@+id/txtTelefon"
+                    style="@style/EditTextler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="phone" />
+            </TableRow>
 
-            <TextView
-                style="@style/TextViewlar"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/email" />
+            <TableRow>
 
-            <EditText
-                android:id="@+id/txtEmail"
-                style="@style/EditTextler"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:inputType="textEmailAddress" />
-        </TableRow>
-    </TableLayout>
+                <TextView
+                    style="@style/TextViewlar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/email" />
+
+                <EditText
+                    android:id="@+id/txtEmail"
+                    style="@style/EditTextler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textEmailAddress" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
 
     <Button
         android:id="@+id/btnEkle"

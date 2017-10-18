@@ -2,6 +2,9 @@
 <resources>
     <dimen name="btnyazi">25sp</dimen>
     <dimen name="txtyazi">22sp</dimen>
-    <dimen name="linearpadding">5dp</dimen>
+    <dimen name="txtyazilist">26sp</dimen>
+    <dimen name="linearpadding">8dp</dimen>
     <dimen name="butonmargin">5dp</dimen>
+    <dimen name="listitemheight">100dp</dimen>
+    <dimen name="listitemyari">50dp</dimen>
 </resources>

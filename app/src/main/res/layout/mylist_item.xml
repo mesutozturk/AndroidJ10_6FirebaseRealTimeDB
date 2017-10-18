@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="@dimen/linearpadding"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/listitemheight"
+        android:layout_weight="0.3"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/myitem_txtAd"
+            style="@style/TextViewlarlist"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/listitemyari"
+            android:text="Kamil" />
+
+        <TextView
+            android:id="@+id/myitem_txtSoyd"
+            style="@style/TextViewlarlist"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/listitemyari"
+            android:text="Fıdıl" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/listitemheight"
+        android:layout_weight="0.7"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/myitem_btnAra"
+            style="@style/MainButtonList"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/listitemyari"
+            android:drawableTop="@android:drawable/ic_menu_call" />
+
+        <Button
+            android:id="@+id/myitem_btnMail"
+            style="@style/MainButtonList"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/listitemyari"
+            android:drawableTop="@android:drawable/ic_dialog_email" />
+    </LinearLayout>
+</LinearLayout>
