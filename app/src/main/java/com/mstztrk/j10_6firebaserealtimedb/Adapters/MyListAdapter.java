@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -95,11 +96,17 @@ public class MyListAdapter extends BaseAdapter {
                 intent.putExtra(Intent.EXTRA_TEXT, "Merhaba " + basilacakKisi.getAd() + " " + basilacakKisi.getSoyad());
                 context.startActivity(intent.createChooser(intent, "Mail Gönder"));*/
 
-                EmailIntentBuilder.from(context)
-                        .to(basilacakKisi.getMail())
-                        .subject("Bu mail android dersinden gönderilmiştir")
-                        .body("Merhaba " + basilacakKisi.getAd() + " " + basilacakKisi.getSoyad())
-                        .start();
+                try {
+                    EmailIntentBuilder.from(context)
+                            .to(basilacakKisi.getMail())
+                            .subject("Bu mail android dersinden gönderilmiştir")
+                            .body("Merhaba " + basilacakKisi.getAd() + " " + basilacakKisi.getSoyad())
+                            .start();
+                } catch (Exception ex) {
+                    Toast.makeText(context, "Hata: " + ex.getMessage(), Toast.LENGTH_SHORT).show();
+                    Log.e("x", ex.getMessage());
+                }
+
             }
         });
 
