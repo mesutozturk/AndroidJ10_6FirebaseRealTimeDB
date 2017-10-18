@@ -18,7 +18,7 @@
     </style>
 
     <style name="TextViewlar">
-        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_gravity">bottom</item>
         <item name="android:layout_margin">@dimen/butonmargin</item>
         <item name="android:textSize">@dimen/txtyazi</item>
         <item name="android:textColor">@color/colorPrimaryDark</item>
